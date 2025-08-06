@@ -1,0 +1,242 @@
+<menu html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú | El Hogar Caliente</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff8f0;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #d84315;
+      color: white;
+      text-align: center;
+      padding: 1.5em 0;
+    }
+
+    nav {
+      background-color: #ffccbc;
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      padding: 1em;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #6d4c41;
+      font-weight: bold;
+      font-size: 1.1em;
+      display: flex;
+      align-items: center;
+    }
+
+    nav i {
+      margin-right: 0.5em;
+      color: #bf360c;
+    }
+
+    main {
+      flex: 1;
+      padding: 2em;
+    }
+
+    .destacado {
+      background-color: #ffe0b2;
+      text-align: center;
+      padding: 2em 1em;
+      margin-bottom: 2em;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .destacado h2 {
+      color: #e65100;
+      margin-bottom: 1em;
+    }
+
+    .destacado img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      margin-top: 1em;
+    }
+
+    .destacado p {
+      margin-top: 1em;
+      font-style: italic;
+      color: #bf360c;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2em;
+    }
+
+    .item {
+      background-color: #ffe0b2;
+      border-radius: 12px;
+      padding: 1em;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .item img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1em;
+    }
+
+    .item h2 {
+      color: #e65100;
+      margin-bottom: 0.5em;
+    }
+
+    .item p {
+      font-style: italic;
+      color: #bf360c;
+      margin-bottom: 0.5em;
+    }
+
+    .pedido {
+      background-color: #f77f00;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 1em;
+      transition: background-color 0.3s ease;
+    }
+
+    .pedido:hover {
+      background-color: #d65a00;
+    }
+
+    footer {
+      background-color: #d84315;
+      color: white;
+      text-align: center;
+      padding: 1em 0;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .pedido {
+        padding: 8px 12px;
+        font-size: 0.9em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Menú de Pizzería El Hogar Caliente</h1>
+  </header>
+
+  <nav>
+    <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+    <a href="menu.html"><i class="fa-solid fa-list"></i> Menú</a>
+    <a href="contacto.html"><i class="fa-solid fa-phone"></i> Contacto</a>
+  </nav>
+
+  <main>
+    <div class="destacado">
+      <h2>Explora nuestras opciones en nuestro restaurante</h2>
+      <img src="https://drive.google.com/thumbnail?id=17-txyWQ431RvlqFfidQbAL1YbIu38GMF&sz=w1000" alt="Imagen nueva">
+      <p>¡Sabores únicos para todos los gustos!</p>
+    </div>
+
+    <div class="grid">
+      <div class="item">
+        <img src="https://i.pinimg.com/736x/c0/f6/e5/c0f6e5f40aeea3c4c875cdf43ca1c95f.jpg" alt="Pizza de Jamón">
+        <h2>Pizza de Jamón</h2>
+        <p>Jamón ahumado, queso mozzarella, salsa de tomate.</p>
+        <p>Q45.00</p>
+        <a href="https://wa.me/50250830682?text=Hola!%20Quiero%20ordenar%20una%20Pizza%20de%20Jamón%20por%20Q65.00"><button class="pedido">¡Pedir ahora!</button></a>
+      </div>
+
+      <div class="item">
+        <img src="https://i.pinimg.com/736x/e1/bd/4b/e1bd4b86ee5778c5402b6cd7b14cdd85.jpg" alt="Pizza Pepperoni">
+        <h2>Pepperoni</h2>
+        <p>Queso mozzarella, salsa de tomate, pepperoni picante.</p>
+        <p>Q45.00</p>
+        <a href="https://wa.me/50250830682?text=Hola!%20Quiero%20ordenar%20una%20Pizza%20Pepperoni%20por%20Q45.00"><button class="pedido">¡Pedir ahora!</button></a>
+      </div>
+
+      <div class="item">
+        <img src="https://i.pinimg.com/736x/1c/7a/0e/1c7a0e9d9bb30173fbbd38be4924d478.jpg" alt="Pizza Alfredo">
+        <h2>Pizza Alfredo</h2>
+        <p>Salsa Alfredo, pollo, champiñones, queso mozzarella.</p>
+        <p>Q60.00</p>
+        <a href="https://wa.me/50250830682?text=Hola!%20Quiero%20ordenar%20una%20Pizza%20Alfredo%20por%20Q60.00"><button class="pedido">¡Pedir ahora!</button></a>
+      </div>
+
+      <div class="item">
+        <img src="https://i.pinimg.com/1200x/d0/3d/8b/d03d8b702a3dae92429e72812e038ce5.jpg" alt="Pizza Mediterránea">
+        <h2>Mediterránea</h2>
+        <p>Tomate seco, aceitunas negras, queso feta, albahaca.</p>
+        <p>Q55.00</p>
+        <a href="https://wa.me/50250830682?text=Hola!%20Quiero%20ordenar%20una%20Pizza%20Mediterránea%20por%20Q55.00"><button class="pedido">¡Pedir ahora!</button></a>
+      </div>
+
+<div class="item">
+  <img src="https://i.pinimg.com/736x/6f/88/76/6f8876eeee1b47430607b20e105683ee.jpg" alt="Combo Familiar">
+  <h2>Combo Familiar</h2>
+  <p>2 pizzas grandes + bebida 2L + pan de ajo.</p>
+  <p>Q150.00</p>
+  <a href="https://wa.me/50250830682?text=Hola!%20Quiero%20ordenar%20el%20Combo%20Familiar%20por%20Q150.00">
+    <button class="pedido">¡Pedir combo!</button>
+  </a>
+</div>
+      <div class="item">
+        <img src="https://i.pinimg.com/736x/58/9e/e8/589ee88f23d3b7d9dda00925d157f1c3.jpg" alt="Combo Pareja">
+        <h2>Combo en Pareja</h2>
+        <p>1 pizza mediana + 2 bebidas + postre.</p>
+        <p>Q90.00</p>
+        <a href="https://wa.me/50250830682?text=Hola!%20Quiero%20ordenar%20el%20Combo%20en%20Pareja%20por%20Q90.00"><button class="pedido">¡Pedir para dos!</button></a>
+      </div>
+
+      <div class="item">
+        <img src="https://i.pinimg.com/736x/82/a5/c8/82a5c82d76f1803ff3e86cc3033aaad5.jpg" alt="Combo Especial">
+        <h2>Combo Especial</h2>
+        <p>Pizza personalizada + bebida + postre sorpresa.</p>
+        <p>Q100.00</p>
+        <a href="https://wa.me/50250830682?text=Hola!%20Quiero%20ordenar%20el%20Combo%20Especial%20por%20Q100.00"><button class="pedido">¡Pedir especial!</button></a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Pizzería El Hogar Caliente. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
+

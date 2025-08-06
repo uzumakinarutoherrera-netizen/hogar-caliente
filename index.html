@@ -1,0 +1,305 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizzería El Hogar Caliente</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      background-color: #f8e8c8;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #d9534f;
+      color: black;
+      padding: 10px;
+    }
+
+    header img {
+      width: 200px;
+      height: auto;
+    }
+
+    nav {
+      margin: 15px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #d9534f;
+      font-weight: bold;
+    }
+
+    nav i {
+      margin-right: 5px;
+    }
+
+    section {
+      margin: 20px;
+      padding: 20px;
+      background-color: #FB8D07;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    }
+
+    .pizza-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .pizza-item {
+      background-color: #fff3e0;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 8px rgba(0,0,0,0.1);
+    }
+
+    .pizza-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    figcaption {
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .agregar-btn {
+      padding: 10px 20px;
+      background-color: #f77f00;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .agregar-btn:hover {
+      background-color: #d65a00;
+    }
+
+    .carrito {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 300px;
+      background-color: #fff3e0;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.3);
+      z-index: 1000;
+      text-align: left;
+    }
+
+    .carrito h2 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    .carrito ul {
+      list-style: none;
+      padding: 0;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+
+    .carrito li {
+      margin-bottom: 8px;
+      font-size: 0.95em;
+    }
+
+    .eliminar-btn {
+      margin-left: 8px;
+      background-color: #d9534f;
+      color: white;
+      border: none;
+      padding: 4px 6px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.8em;
+    }
+
+    .enviar-btn {
+      margin-top: 10px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      font-size: 0.95em;
+    }
+
+    footer {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #333;
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      header img {
+        width: 120px;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .agregar-btn, .enviar-btn {
+        padding: 8px 16px;
+        font-size: 0.9em;
+      }
+
+      section {
+        padding: 10px;
+      }
+
+      figcaption {
+        font-size: 0.9em;
+      }
+
+      .carrito {
+        width: 90%;
+        right: 5%;
+        bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Bienvenidos a Pizzería El Hogar Caliente</h1>
+    <img src="https://drive.google.com/thumbnail?id=1GQP-WGATcmpW0mm9ggnZswCGjBdErH6G" alt="Logo">
+  </header>
+
+  <nav>
+    <a href="#especialidades"><i class="fa-solid fa-pizza-slice"></i> Especialidades</a>
+    <a href="menu.html"><i class="fa-solid fa-list"></i> Menú</a>
+    <a href="contacto.html"><i class="fa-solid fa-phone"></i> Contacto</a>
+  </nav>
+
+  <section id="especialidades">
+    <h2>Nuestras Especialidades</h2>
+
+    <div class="pizza-grid">
+      <div class="pizza-item">
+        <img src="https://th.bing.com/th/id/OIP.WZzAMKDjzhhyAf9D2dhpEQHaE7?cb=iwp2&rs=1&pid=ImgDetMain" alt="Pizza Clásica">
+        <figcaption>Pizza Clásica de la Casa</figcaption>
+        <button class="agregar-btn" onclick="agregarAlCarrito('Pizza Clásica', 65)">Agregar al carrito</button>
+      </div>
+
+      <div class="pizza-item">
+        <img src="https://cdn.bitlysdowssl-aws.com/wp-content/uploads/2024/02/Pizza-1.jpg" alt="Pizza Vegetariana">
+        <figcaption>Pizza Vegetariana Fresca</figcaption>
+        <button class="agregar-btn" onclick="agregarAlCarrito('Pizza Vegetariana', 60)">Agregar al carrito</button>
+      </div>
+
+      <div class="pizza-item">
+        <img src="https://th.bing.com/th/id/OIP.d3k7eheCcLuuHdgROpVr1wAAAA?cb=iwp2&rs=1&pid=ImgDetMain" alt="Pizza Jamón y Champiñones">
+        <figcaption>Pizza con Jamón y Champiñones</figcaption>
+        <button class="agregar-btn" onclick="agregarAlCarrito('Jamón y Champiñones', 70)">Agregar al carrito</button>
+      </div>
+
+      <div class="pizza-item">
+        <img src="https://i.pinimg.com/736x/c6/54/a6/c654a60ca5f2450c56e9553be0e450b9.jpg" alt="Pizza Hawaiana">
+        <figcaption>Pizza Hawaiana</figcaption>
+        <button class="agregar-btn" onclick="agregarAlCarrito('Pizza Hawaiana', 70)">Agregar al carrito</button>
+      </div>
+
+      <div class="pizza-item">
+        <img src="https://i.pinimg.com/736x/19/aa/9d/19aa9dc1f5f02cf3c233638fe980575e.jpg" alt="Pizza de Queso">
+        <figcaption>Pizza de Queso</figcaption>
+        <button class="agregar-btn" onclick="agregarAlCarrito('Pizza de Queso', 50)">Agregar al carrito</button>
+      </div>
+
+      <div class="pizza-item">
+        <img src="https://i.pinimg.com/736x/c0/f6/e5/c0f6e5f40aeea3c4c875cdf43ca1c95f.jpg" alt="Pizza de Jamón">
+        <figcaption>Pizza de Jamón</figcaption>
+        <button class="agregar-btn" onclick="agregarAlCarrito('Pizza de Jamón', 45)">Agregar al carrito</button>
+      </div>
+    </div>
+  </section>
+
+<div class="carrito">
+  <h2>🛒 Carrito</h2>
+  <ul id="lista-carrito"></ul>
+  <p><strong>Total: Q<span id="total">0</span>.00</strong></p>
+  <button class="enviar-btn" onclick="enviarPedido()">Enviar pedido por WhatsApp</button>
+</div>
+
+<script>
+  const carrito = [];
+  let total = 0;
+
+  function agregarAlCarrito(nombre, precio) {
+    const existente = carrito.find(item => item.nombre === nombre);
+    if (existente) {
+      existente.cantidad += 1;
+    } else {
+      carrito.push({ nombre, precio, cantidad: 1 });
+    }
+    total += precio;
+    actualizarCarrito();
+  }
+
+  function eliminarDelCarrito(index) {
+    const item = carrito[index];
+    total -= item.precio * item.cantidad;
+    carrito.splice(index, 1);
+    actualizarCarrito();
+  }
+
+  function actualizarCarrito() {
+    const lista = document.getElementById('lista-carrito');
+    lista.innerHTML = '';
+    carrito.forEach((item, index) => {
+      const li = document.createElement('li');
+      li.innerHTML = `${item.nombre} x${item.cantidad} - Q${item.precio * item.cantidad}.00 
+        <button class="eliminar-btn" onclick="eliminarDelCarrito(${index})">❌</button>`;
+      lista.appendChild(li);
+    });
+    document.getElementById('total').textContent = total;
+  }
+
+  function enviarPedido() {
+    if (carrito.length === 0) {
+      alert("Tu carrito está vacío.");
+      return;
+    }
+
+    let mensaje = "Hola! Quiero ordenar:\n";
+    carrito.forEach(item => {
+      mensaje += `- ${item.nombre} x${item.cantidad} (Q${item.precio * item.cantidad}.00)\n`;
+    });
+    mensaje += `Total: Q${total}.00`;
+
+    const url = `https://wa.me/50250830682?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, '_blank');
+  }
+</script>
